@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição - Semana de Tecnologia e Inovação | Horizonte Tech</title>
+</head>
+
+<style>
+    body {
+        background-image: url('fundo\ 2.avif');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 100px;
+        margin-right: 100px;
+
+    }
+</style>
+
+<body>
+
+    <!-- Cabeçalho e Informações do Evento -->
+    <header>
+        <h1>Semana de Tecnologia e Inovação</h1>
+        <p>Bem-vindo à página oficial de inscrição para a Semana de Tecnologia e Inovação da Universidade.</p>
+        <p><strong>Data:</strong> 15 a 19 de Outubro</p>
+        <p><strong>Local:</strong> Campus Principal(guarulhos) / Transmissão Online</p>
+        <p>Preencha o formulário abaixo para garantir a sua participação no evento e nas oficinas desejadas.</p>
+    </header>
+
+    <hr>
+
+    <!-- Formulário de Inscrição -->
+    <main>
+        <form action="processa.html" method="GET">
+
+            <!-- Dados Pessoais -->
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+
+                <p>
+                    <label for="nome">Nome Completo:*</label><br>
+                    <input type="text" id="nome" name="nome" placeholder="Ex: João da Silva" required minlength="3">
+                </p>
+
+                <p>
+                    <label for="email">E-mail:*</label><br>
+                    <input type="email" id="email" name="email" placeholder="exemplo@universidade.edu.br" required>
+                </p>
+
+                <p>
+                    <label for="telefone">Telefone / WhatsApp:*</label><br>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required
+                        pattern="[0-9\(\)\s\-]+" title="Digite um número de telefone válido.">
+                </p>
+            </fieldset>
+
+            <br>
+
+            <!-- Informações Acadêmicas -->
+            <fieldset>
+                <legend>Informações Acadêmicas</legend>
+
+                <p>
+                    <label for="curso">Curso:*</label><br>
+                    <select id="curso" name="curso" required>
+                        <option value="">-- Selecione o seu curso --</option>
+                        <option value="ciencia_computacao">Ciência da Computação</option>
+                        <option value="ads">Análise e Desenvolvimento de Sistemas</option>
+                        <option value="engenharia_software">Engenharia de Software</option>
+                        <option value="sistemas_informacao">Sistemas de Informação</option>
+                        <option value="outro">Outro Curso / Externo</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label>Período:*</label><br>
+                    <input type="radio" id="matutino" name="periodo" value="matutino" required>
+                    <label for="matutino">Matutino</label><br>
+
+                    <input type="radio" id="vespertino" name="periodo" value="vespertino">
+                    <label for="vespertino">Vespertino</label><br>
+
+                    <input type="radio" id="noturno" name="periodo" value="noturno">
+                    <label for="noturno">Noturno</label><br>
+
+                    <input type="radio" id="integral" name="periodo" value="integral">
+                    <label for="integral">Integral</label>
+                </p>
+            </fieldset>
+
+            <br>
+
+            <!-- Opções de Participação do Evento -->
+            <fieldset>
+                <legend>Opções do Evento</legend>
+
+                <p>
+                    <label>Modalidade de Participação:*</label><br>
+                    <input type="radio" id="presencial" name="modalidade" value="presencial" required>
+                    <label for="presencial">Presencial</label><br>
+
+                    <input type="radio" id="online" name="modalidade" value="online">
+                    <label for="online">Online</label>
+                </p>
+
+                <p>
+                    <label>Oficinas de Interesse (escolha uma ou mais):</label><br>
+                    <input type="checkbox" id="oficina_ai" name="oficinas[]" value="inteligencia_artificial">
+                    <label for="oficina_ai">Inteligência Artificial Aplicada</label><br>
+
+                    <input type="checkbox" id="oficina_web" name="oficinas[]" value="desenvolvimento_web">
+                    <label for="oficina_web">Desenvolvimento Web Moderno</label><br>
+
+                    <input type="checkbox" id="oficina_cyber" name="oficinas[]" value="seguranca_informacao">
+                    <label for="oficina_cyber">Fundamentos de Cibersegurança</label><br>
+
+                    <input type="checkbox" id="oficina_ux" name="oficinas[]" value="ux_ui_design">
+                    <label for="oficina_ux">UX/UI Design e Acessibilidade</label>
+                </p>
+            </fieldset>
+
+            <br>
+
+            <!-- Aceite e Envio -->
+            <fieldset>
+                <legend>Termos e Confirmação</legend>
+
+                <p>
+                    <input type="checkbox" id="termos" name="termos" required>
+                    <label for="termos">Declaro que li e aceito os termos de participação e a política de privacidade do
+                        evento.*</label>
+                </p>
+            </fieldset>
+
+            <br>
+
+            
+            <button type="submit">Realizar Inscrição</button>
+            <button type="reset">Limpar Formulário</button>
+
+        </form>
+    </main>
+
+    <br>
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Semana de Tecnologia e Inovação — Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
